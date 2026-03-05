@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Leon Nanodrugs</title>
+    <meta name="description"
+        content="Get in touch with Leon Nanodrugs. Request a quote, schedule a consultation, or learn more about our FR-JET® nanoparticle manufacturing technology." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+
+    <!-- ═══ TOP BANNER ═══ -->
+    <div class="top-banner">
+        <p>Start with the right technology and scale with confidence</p>
+    </div>
+
+    <!-- ═══ NAVBAR ═══ -->
+    <header class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="/" class="navbar__logo">
+                <span class="logo-leon">LEON</span>
+            </a>
+
+            <nav class="navbar__links" id="nav-links">
+                <a href="/frjet.html" class="nav-link">FR-JET® Technology</a>
+                <div class="nav-dropdown">
+                    <a href="/products.html" class="nav-link nav-link--has-dropdown">
+                        Products
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+                            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <div class="dropdown-panel">
+                        <a href="/nanoscreen.html" class="dropdown-item">
+                            <strong>NANOscreen®</strong>
+                            <span>Rapid screening &amp; formulation identification</span>
+                        </a>
+                        <a href="/nanolab.html" class="dropdown-item">
+                            <strong>NANOlab®</strong>
+                            <span>Process development &amp; non-GMP manufacturing</span>
+                        </a>
+                        <a href="/nanome.html" class="dropdown-item">
+                            <strong>NANOme®</strong>
+                            <span>GMP manufacturing for clinical trials</span>
+                        </a>
+                        <a href="/nanous.html" class="dropdown-item">
+                            <strong>NANOus®</strong>
+                            <span>Large-scale continuous production</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="/services.html" class="nav-link">Services</a>
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/news.html" class="nav-link">News &amp; Events</a>
+                <a href="/contact.html" class="nav-link active">Contact</a>
+            </nav>
+
+            <div class="navbar__actions">
+                <a href="/contact.html" class="btn-quote">Request a Quote</a>
+                <button class="burger" id="burger-btn" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══ MAIN CONTENT ═══ -->
+    <main>
+
+        <!-- PAGE HERO -->
+        <section class="page-hero page-hero--contact">
+            <div class="page-hero__inner">
+                <h1 class="page-hero__title">Get in Touch</h1>
+                <p class="page-hero__subtitle">Whether you need a quote, want to discuss a collaboration, or have a
+                    technical question — our team is here to help.</p>
+            </div>
+        </section>
+
+        <!-- CONTACT CONTENT -->
+        <section class="contact-section">
+            <div class="contact-section__inner">
+
+                <!-- LEFT: Form -->
+                <div class="contact-form-wrapper">
+                    <div class="contact-form-card">
+                        <h2 class="contact-form__title">Request a Quote</h2>
+                        <p class="contact-form__subtitle">Fill in the form below and our team will get back to you
+                            within 24 hours.</p>
+
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">First Name *</label>
+                                    <input type="text" id="first-name" name="firstName" required
+                                        placeholder="Your first name" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Last Name *</label>
+                                    <input type="text" id="last-name" name="lastName" required
+                                        placeholder="Your last name" />
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required
+                                        placeholder="you@company.com" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+49 123 456 789" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Company / Institution *</label>
+                                <input type="text" id="company" name="company" required
+                                    placeholder="Your organization" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="interest">Area of Interest</label>
+                                <select id="interest" name="interest">
+                                    <option value="">Select an option</option>
+                                    <option value="nanoscreen">NANOscreen® — Screening</option>
+                                    <option value="nanolab">NANOlab® — Process Development</option>
+                                    <option value="nanome">NANOme® — GMP Manufacturing</option>
+                                    <option value="nanous">NANOus® — Large-Scale Production</option>
+                                    <option value="services">Services &amp; Leasing</option>
+                                    <option value="partnership">Partnership / Collaboration</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required
+                                    placeholder="Tell us about your project, requirements, or questions..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn--filled btn--magenta btn--large contact-submit">Send
+                                Message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Info Cards -->
+                <aside class="contact-info">
+                    <div class="info-card">
+                        <div class="info-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </div>
+                        <h3 class="info-card__title">General Enquiries</h3>
+                        <a href="mailto:info@leon-nanodrugs.com" class="info-card__link">info@leon-nanodrugs.com</a>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h3 class="info-card__title">Partnering Info</h3>
+                        <a href="mailto:request@leon-nanodrugs.com"
+                            class="info-card__link">request@leon-nanodrugs.com</a>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <h3 class="info-card__title">Visit Us</h3>
+                        <address class="info-card__address">
+                            leon-nanodrugs GmbH<br>
+                            Am Klopferspitz 19<br>
+                            D-82152 Planegg, Germany
+                        </address>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                        </div>
+                        <h3 class="info-card__title">Call Us</h3>
+                        <p class="info-card__text">Phone: <a href="tel:+4989414248890">+49(0)89 41 42 48 89-0</a></p>
+                        <p class="info-card__text">Fax: <a href="tel:+49894142488988">+49(0)89 41 42 48 89-88</a></p>
+                    </div>
+                </aside>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══ GLOBAL FOOTER ═══ -->
+    <footer class="site-footer">
+        <div class="footer__inner">
+            <div class="footer__grid">
+                <div class="footer__col footer__brand">
+                    <div class="footer__logo">LEON</div>
+                    <p class="footer__tagline">Enabling Nano Now</p>
+                    <p class="footer__engineered">Engineered in Germany</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">General Info & Enquiries</h4>
+                    <a href="mailto:info@leon-nanodrugs.com" class="footer__link">info@leon-nanodrugs.com</a>
+                    <h4 class="footer__heading" style="margin-top:1.5rem;">Partnering Info</h4>
+                    <a href="mailto:request@leon-nanodrugs.com" class="footer__link">request@leon-nanodrugs.com</a>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__heading">Contact</h4>
+                    <address class="footer__address">
+                        leon-nanodrugs GmbH<br>Am Klopferspitz 19<br>D-82152 Planegg<br>Germany
+                    </address>
+                    <p class="footer__phone">Phone <a href="tel:+4989414248890">+49(0)89 41 42 48 89-0</a></p>
+                    <p class="footer__phone">Fax <a href="tel:+49894142488988">+49(0)89 41 42 48 89-88</a></p>
+                    <div class="footer__social">
+                        <span>Follow us:</span>
+                        <a href="https://www.linkedin.com/company/leon-nanodrugs/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copy">&copy; 2026 Leon Nanodrugs. All rights reserved.</p>
+                <nav class="footer__legal">
+                    <a href="#">Career</a>
+                    <a href="#">Downloads</a>
+                    <a href="#">Site Notice</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Disclaimer</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/src/main.js"></script>
+</body>
+
+</html>
