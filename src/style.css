@@ -428,10 +428,11 @@ img {
 }
 
 /* CTA Buttons */
-.hero__ctas {
+.hero__ctas,
+.hero-actions {
   display: flex;
   gap: 1rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3rem;
 }
 
 .btn {
@@ -550,7 +551,8 @@ img {
     font-size: 0.95rem;
   }
 
-  .hero__ctas {
+  .hero__ctas,
+  .hero-actions {
     flex-direction: column;
     width: 100%;
   }
@@ -840,6 +842,21 @@ img {
   color: var(--gray-dark);
   line-height: 1.6;
   margin-top: 1.5rem;
+}
+
+.section-product-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.section-product-list li {
+  font-size: 1.05rem;
+  color: var(--gray-dark);
+  line-height: 1.5;
 }
 
 /* Products Grid */
