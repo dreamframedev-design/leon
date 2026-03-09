@@ -128,7 +128,7 @@
 .slide-title {
     font-family: var(--font-heading);
     font-size: 4.2rem;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--white);
     letter-spacing: -0.02em;
     line-height: 1.05;
@@ -156,7 +156,7 @@
 
 .slide-logo .logo-nano {
     color: var(--cyan);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* ─── 5-Column Glass Grid ─── */
@@ -298,7 +298,7 @@
     padding-top: 1.5rem;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--white);
     display: flex;
     align-items: center;
@@ -343,7 +343,7 @@
 
 .footer-date {
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 600;
     color: rgba(255, 255, 255, 0.4);
     letter-spacing: 0.05em;
 }
