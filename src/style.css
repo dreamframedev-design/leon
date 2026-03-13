@@ -31,6 +31,12 @@
   --cyan: #1dbadf;
   --cyan-dk: #178fa8;
   --teal: #24aaa0;
+  --green: #00B894;
+  --green-dk: #008f72;
+  --orange: #FF5722;
+  --orange-dk: #E64A19;
+  --blue: #2980B9;
+  --blue-dk: #1F618D;
   --gray-dark: #727372;
   --gray-light: #c3c3c3;
   --white: #ffffff;
@@ -284,7 +290,7 @@ img {
   font-weight: 600;
   font-family: var(--font-heading);
   color: var(--white);
-  background: var(--magenta);
+  background: var(--navy);
   border-radius: 6px;
   letter-spacing: 0.01em;
   transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
@@ -292,9 +298,9 @@ img {
 }
 
 .btn-quote:hover {
-  background: var(--magenta-dk);
+  background: var(--navy-dark);
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(231, 28, 133, 0.3);
+  box-shadow: 0 4px 16px rgba(44, 73, 154, 0.3);
 }
 
 /* Hamburger */
@@ -422,12 +428,12 @@ img {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--cyan);
+  color: var(--white);
   padding: 0.4rem 1rem 0.4rem 0.75rem;
-  border: 1px solid rgba(29, 186, 223, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 100px;
   margin-bottom: 2rem;
-  background: rgba(29, 186, 223, 0.08);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(8px);
 }
 
@@ -436,7 +442,7 @@ img {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--cyan);
+  background: var(--white);
   animation: pulse 2s ease-in-out infinite;
 }
 
@@ -504,15 +510,27 @@ img {
 }
 
 .btn--filled {
-  background: var(--magenta);
+  background: var(--navy);
   color: var(--white);
-  border: 1px solid var(--magenta);
+  border: 1px solid var(--navy);
 }
 
 .btn--filled:hover {
+  background: var(--navy-dark);
+  border-color: var(--navy-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(44, 73, 154, 0.3);
+}
+
+.btn--magenta {
+  background: var(--magenta);
+  border-color: var(--magenta);
+  color: var(--white);
+}
+
+.btn--magenta:hover {
   background: var(--magenta-dk);
   border-color: var(--magenta-dk);
-  transform: translateY(-2px);
   box-shadow: 0 6px 24px rgba(231, 28, 133, 0.3);
 }
 
@@ -1127,12 +1145,20 @@ img {
   color: var(--cyan);
 }
 
-.highlight-teal {
-  color: var(--teal);
+.highlight-green {
+  color: var(--green);
+}
+
+.highlight-orange {
+  color: var(--orange);
 }
 
 .highlight-magenta {
   color: var(--magenta);
+}
+
+.highlight-cyan {
+  color: var(--cyan);
 }
 
 .product-card__sub {
@@ -1226,26 +1252,37 @@ img {
 }
 
 /* Button color variants */
-.btn--product:not(.btn--teal):not(.btn--magenta):not(.btn--cyan) {
+.btn--product:not(.btn--green):not(.btn--magenta):not(.btn--cyan):not(.btn--orange) {
   background: var(--cyan);
   border-color: var(--cyan);
 }
 
-.btn--product:not(.btn--teal):not(.btn--magenta):not(.btn--cyan):hover {
+.btn--product:not(.btn--green):not(.btn--magenta):not(.btn--cyan):not(.btn--orange):hover {
   background: var(--cyan-dk);
   border-color: var(--cyan-dk);
   box-shadow: 0 4px 16px rgba(29, 186, 223, 0.3);
 }
 
-.btn--teal {
-  background: var(--teal);
-  border-color: var(--teal);
+.btn--green {
+  background: var(--green);
+  border-color: var(--green);
 }
 
-.btn--teal:hover {
-  background: #1d8d85;
-  border-color: #1d8d85;
-  box-shadow: 0 4px 16px rgba(36, 170, 160, 0.3);
+.btn--green:hover {
+  background: var(--green-dk);
+  border-color: var(--green-dk);
+  box-shadow: 0 4px 16px rgba(0, 184, 148, 0.3);
+}
+
+.btn--orange {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+.btn--orange:hover {
+  background: var(--orange-dk);
+  border-color: var(--orange-dk);
+  box-shadow: 0 4px 16px rgba(255, 87, 34, 0.3);
 }
 
 .btn--cyan {
@@ -1328,57 +1365,42 @@ img {
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Glass Grid */
-.services-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  padding: 2.5rem 1.5rem;
+/* Service Option Cards (Redesigned) */
+.service-option-card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
   text-align: center;
   flex: 1 1 200px;
   max-width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  transition: transform 0.3s, background 0.3s, border-color 0.3s;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.glass-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.4);
-}
-
-.glass-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.95);
-  display: flex;
-  align-items: center;
   justify-content: center;
-  color: var(--navy);
-  border: 2px solid rgba(255, 255, 255, 1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid var(--navy);
+  min-height: 160px;
 }
 
-.glass-title {
+.service-option-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.service-option-card:nth-child(1) { border-top-color: var(--navy); }
+.service-option-card:nth-child(2) { border-top-color: var(--blue); }
+.service-option-card:nth-child(3) { border-top-color: var(--green); }
+.service-option-card:nth-child(4) { border-top-color: var(--orange); }
+.service-option-card:nth-child(5) { border-top-color: var(--magenta); }
+
+.service-option-title {
   font-family: var(--font-heading);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--white);
-  line-height: 1.4;
+  color: var(--navy-deep);
+  line-height: 1.3;
 }
 
 .services-footer {
@@ -1496,11 +1518,12 @@ img {
 
 .news-date {
   font-size: 0.85rem;
-  color: var(--cyan);
-  font-weight: 600;
+  color: var(--navy);
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
+  opacity: 0.7;
 }
 
 .news-card__title {
@@ -1515,15 +1538,18 @@ img {
 .news-link {
   margin-top: auto;
   font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--magenta);
+  font-weight: 700;
+  color: var(--navy-deep);
   text-decoration: none;
-  display: inline-block;
-  transition: color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.2s, color 0.2s;
 }
 
 .news-link:hover {
-  color: #c90e6e;
+  gap: 8px;
+  color: var(--blue);
 }
 
 .news-footer {
